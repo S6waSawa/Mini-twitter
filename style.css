@@ -12,7 +12,7 @@ body{
 svg{
     width: 24px;
     height: 24px;
-    margin: 30px;
+    margin: 15px;
     color: white;
     
     
@@ -22,11 +22,11 @@ svg{
 img{
 width: 30px;
 height: 30px;
-margin: 30px;
+margin: 10px;
 
 }
 .sidebar{
-    padding-left: 30px;
+    padding-left: 50px;
 }
 
 .sidebar ul {
@@ -67,7 +67,7 @@ color: #374151;
 .profile img{
 width:50px;
 height: 50px;
-margin: 30px;
+margin: 0px;
 border-radius:50%;
 
 }
