@@ -8,7 +8,7 @@
 body{
     background-color: black;
 }
-
+/* .sidebar */
 svg{
     width: 24px;
     height: 24px;
@@ -50,9 +50,14 @@ a{
     width: 200px;
     height: 50px;
     border-radius: 40px;
-
+    border: none;
 }
-
+.post:hover {
+    background-color:rgb(211, 211,211); 
+    color: black;
+    cursor: pointer;
+    
+}
 .profile{
     display: flex;
     color: white;
@@ -60,6 +65,9 @@ a{
     margin-top: 10px;
     text-align: center;
     align-items: center;
+    padding-left: 10px;
+    width: 300px;
+    height: 60px;
 }
 .profile h2{
 color: #374151;
@@ -70,4 +78,72 @@ height: 50px;
 margin: 0px;
 border-radius:50%;
 
+}
+.sidebar{
+    width: 300px;
+}
+.profile:hover {
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+    
+}
+
+.Home:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.Explore:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.Notification:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.follow:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.chat:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.Grok:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.Bookmarkes:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.Premium:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.Profile-li:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.More:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.logo{
+width: 50px;
+}
+.logo:hover{
+    background-color:rgba(64, 64,64,0.5); 
+    border-radius: 40px;
+    cursor: pointer;
 }
