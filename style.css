@@ -147,3 +147,11 @@ width: 50px;
     border-radius: 40px;
     cursor: pointer;
 }
+
+.profile span{
+padding-left:10px ;
+}
+
+.profile span h1{
+padding-bottom:5px ;
+}
