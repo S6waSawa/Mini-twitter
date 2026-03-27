@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Twitter</title>
 </head>
 
@@ -12,13 +15,15 @@
     <nav class="sidebar">
         <div class="logo"><img src="images/il_fullxfull.5474878123_94t0.webp" alt="logo-image"></div>
         <ul>
-            <li class="Home">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-
+            <li class="Home active">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                    <span class="blue-dot"></span>
+                </div>
                 <a href="#Home">Home</a>
             </li>
             <li class="Explore">
@@ -99,7 +104,7 @@
                 <a href="#More">More</a>
             </li>
         </ul>
-        <button class="post">Post</button>
+        <button class="post"><span>Post</span>+</button>
 
         <div class="profile">
             <img class="profile-image" src="images/pp,504x498-pad,600x600,f8f8f8.jpg" alt="profile-image">
@@ -107,7 +112,6 @@
                 <h1>Eng.Omar Shaban</h1>
                 <h2>@Omar_shaban00</h2>
             </span>
-            <!-- icon or list -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -116,8 +120,438 @@
 
 
 
+
         </div>
     </nav>
+
+    <div class="main">
+        <div class="home-buttons">
+            <button class="tab active">For you</button>
+            <button class="tab">Following</button>
+        </div>
+        <div class="compose-wrapper">
+            <div class="compose-top">
+                <div class="avatar">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                    </svg>
+                </div>
+
+                <div class="textarea-area">
+                    <textarea class="compose-input" placeholder="What's happening?" rows="2" id="tweetInput"></textarea>
+
+                    <div class="reply-setting">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17.863 13.44c1.477 1.58 2.366 3.67 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.79 1.155-4.88 2.632-6.46C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44zM12 2C9.791 2 8 3.79 8 6s1.791 4 4 4 4-1.79 4-4-1.791-4-4-4z" />
+                        </svg>
+                        Accounts you follow can reply
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="compose-bottom">
+                <div class="toolbar">
+                    <button class="tool-btn" title="Media">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M3 5.5C3 4.119 4.119 3 5.5 3h13C19.881 3 21 4.119 21 5.5v13c0 1.381-1.119 2.5-2.5 2.5h-13C4.119 21 3 19.881 3 18.5v-13zM5.5 5c-.276 0-.5.224-.5.5v9.086l3-3 3 3 1-1 3 3 1-1-3-3 .023-.023 2.977-2.977V5.5c0-.276-.224-.5-.5-.5h-13zM18 10.586l-2 2V5h.5c.276 0 .5.224.5.5v5.086zM8.5 8C7.672 8 7 8.672 7 9.5S7.672 11 8.5 11 10 10.328 10 9.5 9.328 8 8.5 8z" />
+                        </svg>
+                    </button>
+
+
+                    <button class="tool-btn" title="GIF">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5zm-6.313 3.48a.625.625 0 0 0 .938-.81l-1.19-1.387.762-.762a.625.625 0 1 0-.884-.884l-.762.762-1.388-1.19a.625.625 0 0 0-.81.938l1.19 1.387-.763.763a.625.625 0 1 0 .884.884l.762-.762 1.261 1.061zM9.5 9.25a.75.75 0 1 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5zm4 .5a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5H15v1h1.25a.75.75 0 0 1 0 1.5H15v1.5a.75.75 0 0 1-1.5 0V9.75z" />
+                        </svg>
+                    </button>
+
+                    <button class="tool-btn" title="Format">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9" stroke="#1d9bf0" stroke-width="2" fill="none" />
+                            <line x1="5" y1="5" x2="19" y2="19" stroke="#1d9bf0" stroke-width="2" />
+                        </svg>
+                    </button>
+
+                    <button class="tool-btn" title="Poll">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M3 4.5A1.5 1.5 0 0 1 4.5 3h15A1.5 1.5 0 0 1 21 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-15zm1.5 0v15h15v-15h-15zm3 3.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 4h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 4h5a.5.5 0 0 1 0 1H7.5a.5.5 0 0 1 0-1z" />
+                        </svg>
+                    </button>
+
+
+                    <button class="tool-btn" title="Emoji">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-6c.78 2.34 2.72 4 5 4s4.22-1.66 5-4H7zm3-4c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1zm4 0c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1z" />
+                        </svg>
+                    </button>
+
+
+                    <button class="tool-btn" title="Schedule">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+                        </svg>
+                    </button>
+
+
+                    <button class="tool-btn" title="Location">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </button>
+
+                    <button class="tool-btn" title="Tag">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14.5 3H5v18l7-3 7 3V9.5L14.5 3zM17 17.84l-5-2.14-5 2.14V5h9.5L19 9.96V17.84z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <button class="post-btn" id="postBtn" disabled>Post</button>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="header">
+                <div class="avatar" style="color: black; background-color: orange;">M</div>
+                <div class="user-info">
+                    <div class="name">Mo<i class="fa-solid fa-circle-check"></i></div>
+                    <div class="handle">@Mo · 16h</div>
+                </div>
+                <div class="more-btn"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+
+            <div class="tweet-text">
+                Bro just saved the whole neighborhood in 10 seconds
+            </div>
+
+            <div class="media">
+                <img src="images/il_fullxfull.5474878123_94t0.webp" alt="Tweet image">
+            </div>
+
+            <hr class="divider">
+
+            <div class="actions">
+                <div class="action reply">
+                    <i class="fa-regular fa-comment"></i> 250
+                </div>
+                <div class="action retweet">
+                    <i class="fa-solid fa-retweet"></i> 94
+                </div>
+                <div class="action like" id="likeBtn">
+                    <i class="fa-regular fa-heart"></i>
+                    <span id="likeCount">571</span>
+                </div>
+                <div class="action views">
+                    <i class="fa-solid fa-chart-simple"></i> 313K
+                </div>
+                <div class="action share">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="card">
+
+            <div class="header">
+                <div class="avatar" style="color: wheat; background-color: #9c27b0;">H</div>
+                <div class="user-info">
+                    <div class="name">Ha <i class="fa-solid fa-circle-check"></i></div>
+                    <div class="handle">@Ha · 16h</div>
+                </div>
+                <div class="more-btn"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+
+            <div class="tweet-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+
+                <div class="media">
+                    <img src="images/il_fullxfull.5474878123_94t0.webp" alt="Tweet image">
+                </div>
+
+                <hr class="divider">
+
+                <div class="actions">
+                    <div class="action reply">
+                        <i class="fa-regular fa-comment"></i> 250
+                    </div>
+                    <div class="action retweet">
+                        <i class="fa-solid fa-retweet"></i> 94
+                    </div>
+                    <div class="action like" id="likeBtn">
+                        <i class="fa-regular fa-heart"></i>
+                        <span id="likeCount">571</span>
+                    </div>
+                    <div class="action views">
+                        <i class="fa-solid fa-chart-simple"></i> 313K
+                    </div>
+                    <div class="action share">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="header">
+                    <div class="avatar" style="color: aqua; background-color: #e91e63;">O</div>
+                    <div class="user-info">
+                        <div class="name">Osama <i class="fa-solid fa-circle-check"></i></div>
+                        <div class="handle">@Osama · 16h</div>
+                    </div>
+                    <div class="more-btn"><i class="fa-solid fa-ellipsis"></i></div>
+                </div>
+
+                <div class="tweet-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+
+                <div class="media">
+                    <img src="images/il_fullxfull.5474878123_94t0.webp" alt="Tweet image">
+                </div>
+
+                <hr class="divider">
+
+                <div class="actions">
+                    <div class="action reply">
+                        <i class="fa-regular fa-comment"></i> 250
+                    </div>
+                    <div class="action retweet">
+                        <i class="fa-solid fa-retweet"></i> 94
+                    </div>
+                    <div class="action like" id="likeBtn">
+                        <i class="fa-regular fa-heart"></i>
+                        <span id="likeCount">571</span>
+                    </div>
+                    <div class="action views">
+                        <i class="fa-solid fa-chart-simple"></i> 313K
+                    </div>
+                    <div class="action share">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="header">
+                    <div class="avatar" style="color: rgb(67, 0, 0); background-color: #b3e91e;">N</div>
+                    <div class="user-info">
+                        <div class="name">Nada <i class="fa-solid fa-circle-check"></i></div>
+                        <div class="handle">@Nada · 16h</div>
+                    </div>
+                    <div class="more-btn"><i class="fa-solid fa-ellipsis"></i></div>
+                </div>
+
+                <div class="tweet-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing. </div>
+
+                <div class="media">
+                    <img src="images/il_fullxfull.5474878123_94t0.webp" alt="Tweet image">
+
+                </div>
+
+                <hr class="divider">
+
+                <div class="actions">
+                    <div class="action reply">
+                        <i class="fa-regular fa-comment"></i> 250
+                    </div>
+                    <div class="action retweet">
+                        <i class="fa-solid fa-retweet"></i> 94
+                    </div>
+                    <div class="action like" id="likeBtn">
+                        <i class="fa-regular fa-heart"></i>
+                        <span id="likeCount">571</span>
+                    </div>
+                    <div class="action views">
+                        <i class="fa-solid fa-chart-simple"></i> 313K
+                    </div>
+                    <div class="action share">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side">
+
+        <div class="search-bar">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span>Search</span>
+        </div>
+
+        <div class="subscribe-card">
+            <div class="subscribe-header">
+                <h2>Subscribe to Premium</h2>
+                <span class="badge-off">50% off</span>
+            </div>
+            <p class="subscribe-desc">Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+            </p>
+            <button class="btn-subscribe">Subscribe</button>
+        </div>
+
+        <div class="news">
+            <div class="news-card-header">
+                <span class="card-title" style="padding:0">Today's News</span>
+                <button class="close-btn">✕</button>
+            </div>
+
+            <div class="news-item">
+                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+                <div class="news-meta">
+                    <div class="avatars">
+                        <div class="avatar-sm" style="background:linear-gradient(135deg,#e91e8c,#9c27b0)"></div>
+                        <div class="avatar-sm" style="background:linear-gradient(135deg,#ff5722,#e91e63)"></div>
+                    </div>
+                    <span>2 days ago</span><span class="dot"></span>
+                    <span>Entertainment</span><span class="dot"></span>
+                    <span>76.1K posts</span>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+                <div class="news-meta">
+                    <div class="avatars">
+                        <div class="avatar-sm" style="background:linear-gradient(135deg,#1565c0,#42a5f5)"></div>
+                        <div class="avatar-sm" style="background:linear-gradient(135deg,#00695c,#26a69a)"></div>
+                    </div>
+                    <span>20 hours ago</span><span class="dot"></span>
+                    <span>News</span><span class="dot"></span>
+                    <span>73.1K posts</span>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing.</h3>
+                <div class="news-meta">
+                    <div class="avatars">
+                        <div class="avatar-sm" style="background:linear-gradient(135deg,#7b1fa2,#ab47bc)"></div>
+                        <div class="avatar-sm" style="background:linear-gradient(135deg,#1565c0,#42a5f5)"></div>
+                    </div>
+                    <span>2 days ago</span><span class="dot"></span>
+                    <span>Entertainment</span><span class="dot"></span>
+                    <span>462.8K posts</span>
+                </div>
+            </div>
+        </div>
+        <div class="trend">
+            <span class="card-title">What's happening</span>
+            <div class="trend-item">
+                <div style="flex:1">
+                    <div class="trend-name">PUBGMCarnival</div>
+                    <div class="trend-name" style="font-weight:400;font-size:14px;color:var(--subtext)">الذكرى السنوية
+                        الثامنة عند أهرامات الجيزة</div>
+                    <div class="trend-promoted">
+                        <span class="promo-icon">▶</span>
+                        Promoted by PUBG MOBILE Arabic
+                    </div>
+                </div>
+                <span class="trend-more">···</span>
+            </div>
+
+            <div class="trend-item">
+                <div style="flex:1">
+                    <div class="trend-label">Trending in Egypt</div>
+                    <div class="trend-name">الملحق الموهل</div>
+                </div>
+                <span class="trend-more">···</span>
+            </div>
+
+            <div class="trend-item">
+                <div style="flex:1">
+                    <div class="trend-label">Trending in Egypt</div>
+                    <div class="trend-name">محمد صلاح</div>
+                </div>
+                <span class="trend-more">···</span>
+            </div>
+
+            <div class="trend-item">
+                <div style="flex:1">
+                    <div class="trend-label">Trending in Egypt</div>
+                    <div class="trend-name">على الموازنه العامه</div>
+                </div>
+                <span class="trend-more">···</span>
+            </div>
+
+            <a class="show-more">Show more</a>
+        </div>
+
+        <div class="following">
+            <span class="card-title">Who to follow</span>
+
+            <div class="follow-item">
+                <div class="follow-avatar green">F</div>
+                <div class="follow-info">
+                    <div class="follow-name">
+                        FilGoal
+                        <svg class="gold" width="16" height="16" viewBox="0 0 24 24" fill="#f4900c">
+                            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+                        </svg>
+                    </div>
+                    <div class="follow-handle">@FilGoal</div>
+                </div>
+                <button class="btn-follow">Follow</button>
+            </div>
+
+            <div class="follow-item">
+                <div class="follow-avatar" style="background:linear-gradient(135deg,#1565c0,#42a5f5)">A</div>
+                <div class="follow-info">
+                    <div class="follow-name">
+                        Amr Diab
+                        <svg class="verified" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91-1.01-1.01-2.52-1.27-3.91-.81C14.66 2.88 13.43 2 12 2c-1.43 0-2.67.88-3.34 2.19-1.39-.46-2.9-.2-3.91.81-1.01 1.01-1.27 2.52-.81 3.91C2.88 9.34 2 10.57 2 12c0 1.43.88 2.67 2.19 3.34-.46 1.39-.2 2.9.81 3.91 1.01 1.01 2.52 1.27 3.91.81C9.34 21.12 10.57 22 12 22c1.43 0 2.67-.88 3.34-2.19 1.39.46 2.9.2 3.91-.81 1.01-1.01 1.27-2.52.81-3.91C21.12 14.66 22 13.43 22 12zm-6.16-1.84l-4.3 4.3a.75.75 0 01-1.06 0l-2-2a.75.75 0 111.06-1.06l1.47 1.47 3.77-3.77a.75.75 0 011.06 1.06z" />
+                        </svg>
+                    </div>
+                    <div class="follow-handle">@amrdiab</div>
+                </div>
+                <button class="btn-follow">Follow</button>
+            </div>
+
+            <div class="follow-item">
+                <div class="follow-avatar orange">أ</div>
+                <div class="follow-info">
+                    <div class="follow-name">
+                        أحمد الطيب
+                        <svg class="verified" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91-1.01-1.01-2.52-1.27-3.91-.81C14.66 2.88 13.43 2 12 2c-1.43 0-2.67.88-3.34 2.19-1.39-.46-2.9-.2-3.91.81-1.01 1.01-1.27 2.52-.81 3.91C2.88 9.34 2 10.57 2 12c0 1.43.88 2.67 2.19 3.34-.46 1.39-.2 2.9.81 3.91 1.01 1.01 2.52 1.27 3.91.81C9.34 21.12 10.57 22 12 22c1.43 0 2.67-.88 3.34-2.19 1.39.46 2.9.2 3.91-.81 1.01-1.01 1.27-2.52.81-3.91C21.12 14.66 22 13.43 22 12zm-6.16-1.84l-4.3 4.3a.75.75 0 01-1.06 0l-2-2a.75.75 0 111.06-1.06l1.47 1.47 3.77-3.77a.75.75 0 011.06 1.06z" />
+                        </svg>
+                    </div>
+                    <div class="follow-handle">@alimamaltayeb</div>
+                </div>
+                <button class="btn-follow">Follow</button>
+            </div>
+
+            <a class="show-more">Show more</a>
+
+            <div class="footer">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Ads info</a>
+                <a href="#">More…</a>
+                <span style="color:var(--subtext);font-size:13px">© 2026 X .</span>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 
