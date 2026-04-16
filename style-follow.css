@@ -1,0 +1,118 @@
+body {
+    font-family: Arial;
+    background: #eaebee;
+}
+
+.container {
+    width: 500px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabs label {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: gray;
+    font-weight: bold;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#tab1:checked ~ .tabs label[for="tab1"],
+#tab2:checked ~ .tabs label[for="tab2"] {
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+/* Content */
+.content {
+    display: none;
+    margin-top: 15px;
+}
+
+#tab1:checked ~ .content1,
+#tab2:checked ~ .content2 {
+    display: block;
+}
+
+/* Card */
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.card:hover {
+    background: #f7f7f7;
+}
+
+/* User */
+.user {
+    display: flex;
+    gap: 10px;
+}
+
+/* Avatar */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Info */
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.verified {
+    color: #1DA1F2;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.username {
+    font-size: 13px;
+    color: gray;
+}
+
+.bio {
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.follow {
+    background: black;
+    color: white;
+}
+
+.subscribe {
+    background: black;
+    color: white;
+}
